@@ -15,7 +15,9 @@
  */
 package org.locationtech.proj4j;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.locationtech.proj4j.datum.Datum;
@@ -144,6 +146,18 @@ public class Registry {
             }
         }
         return null;
+    }
+
+    public List<Projection> getProjections() {
+        List<Projection> projections = new ArrayList<>();
+
+        for (String name : projRegistry.keySet()) {
+            Projection projection = getProjection(name);
+
+            projections.add(projection);
+        }
+
+        return projections;
     }
 
     private synchronized void initialize() {
