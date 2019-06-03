@@ -32,7 +32,7 @@ public final class PrimeMeridian implements Serializable {
     private final double offsetFromGreenwich;
 
     private static PrimeMeridian GREENWICH = new PrimeMeridian("greenwich", 0);
-    private static PrimeMeridian[] wellKnownMeridians = {
+    public static PrimeMeridian[] wellKnownMeridians = {
         east("greenwich", 0, 0, 0),
         west("lisbon",    9, 7, 54.862),
         east("paris",     2,20,14.025),
