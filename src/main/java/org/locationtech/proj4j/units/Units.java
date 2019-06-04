@@ -55,11 +55,11 @@ public class Units {
     public final static Unit POINTS = new Unit("point", "points", "point", 0.0254/72.27);
 
     public static Unit[] units = {
-        DEGREES,
         KILOMETRES, METRES, DECIMETRES, CENTIMETRES, MILLIMETRES,
         MILES, YARDS, FEET, INCHES,
         US_MILES, US_YARDS, US_FEET, US_INCHES,
-        NAUTICAL_MILES
+        NAUTICAL_MILES,
+        CHAINS, US_CHAINS, FATHOMS, LINKS
     };
 
     public static Unit findUnits(String name) {
